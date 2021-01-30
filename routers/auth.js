@@ -1,9 +1,11 @@
 const express = require('express');
-const {register} = require('../controllers/auth')
 const router = express.Router();
+const { register, errorTest } = require('../controllers/auth')
 
-//api/auth/register
-router.post('/register',register)
+// api/auth/register
+router.post('/register', register);
+
+router.get('/error', errorTest);
 
 
 

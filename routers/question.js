@@ -1,9 +1,10 @@
 const express = require('express');
-const {getAllQuestions} = require('../controllers/question')
+const router = express.Router();
+const { getAllQuestions } = require('../controllers/question')
+
+
 
 // api/questions
-const router = express.Router();
-
 router.get('/', getAllQuestions)
 
 
